@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f9fa;
+  --foreground: #212529;
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --secondary: #64748b;
+  --accent: #4361ee;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-tertiary: #6c757d;
+  --text-muted: #adb5bd;
+  --text-heading: #000000;
+  --text-link: #3b82f6;
+  --text-link-hover: #2563eb;
+  --text-code: #d63384;
+  --text-quote: #6c757d;
 }
 
 @theme inline {
@@ -12,15 +28,72 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #60a5fa;
+  --primary-light: #93c5fd;
+  --secondary: #94a3b8;
+  --accent: #4f46e5;
+  --card-bg: #111827;
+  --card-border: #1f2937;
+  
+  --text-primary: #f8f9fa;
+  --text-secondary: #e9ecef;
+  --text-tertiary: #ced4da;
+  --text-muted: #6c757d;
+  --text-heading: #ffffff;
+  --text-link: #60a5fa;
+  --text-link-hover: #93c5fd;
+  --text-code: #f983c3;
+  --text-quote: #adb5bd;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+}
+
+p, li, span, div {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+a {
+  color: var(--text-link);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--text-link-hover);
+}
+
+blockquote {
+  color: var(--text-quote);
+  border-left: 4px solid var(--text-muted);
+}
+
+code {
+  color: var(--text-code);
+  background-color: var(--card-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: var(--font-mono);
 }

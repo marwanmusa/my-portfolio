@@ -19,7 +19,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm md:text-lg font-medium text-blue-600 dark:text-blue-400 mb-2"
+              className="text-sm md:text-lg font-medium text-text-link mb-2"
             >
               Hello, I'm
             </motion.h2>
@@ -27,7 +27,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-4xl md:text-6xl font-bold mb-4"
+              className="text-4xl md:text-6xl font-bold text-text-heading mb-4"
             >
               Marwan Musa
             </motion.h1>
@@ -35,7 +35,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-300 mb-6"
+              className="text-xl md:text-2xl font-medium text-text-secondary mb-6"
             >
               Data Scientist | AI Engineer | Software Engineer
             </motion.h3>
@@ -43,7 +43,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
+              className="text-base md:text-lg text-text-tertiary mb-8 max-w-2xl"
             >
               Building intelligent solutions through code. Passionate about AI, data analysis,
               and software engineering with expertise in Python, C++, and TypeScript.
@@ -56,13 +56,13 @@ const Hero = () => {
             >
               <Link 
                 href="#projects" 
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-light transition-colors"
               >
                 View Projects
               </Link>
               <Link 
                 href="#contact" 
-                className="bg-transparent border border-gray-300 dark:border-gray-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="bg-transparent border border-card-border px-6 py-3 rounded-lg font-medium text-text-secondary hover:text-text-link hover:bg-card-bg transition-colors"
               >
                 Contact Me
               </Link>
@@ -74,9 +74,9 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 flex justify-center"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary">
               {/* Replace with your own image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-4xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-4xl">
                 MM
               </div>
               {/* Uncomment and add your own image
