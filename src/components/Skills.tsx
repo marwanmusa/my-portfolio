@@ -29,9 +29,9 @@ const Skills = () => {
       category: "Data Science & AI",
       skills: [
         { name: "Machine Learning", level: 90 },
+        { name: "Deep Learning", level: 85 },
         { name: "Data Analysis", level: 85 },
-        { name: "Deep Learning", level: 80 },
-        { name: "Natural Language Processing", level: 75 },
+        { name: "Natural Language Processing", level: 80 },
       ],
     },
     {
@@ -40,7 +40,7 @@ const Skills = () => {
         { name: "React", level: 85 },
         { name: "Next.js", level: 80 },
         { name: "Node.js", level: 75 },
-        { name: "RESTful APIs", level: 90 },
+        // { name: "RESTful APIs", level: 90 },
       ],
     },
   ];
@@ -133,8 +133,8 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 max-w-2xl mx-auto"
         >
-          <h3 className="text-xl font-semibold mb-6 text-center">Core Competencies</h3>
-          <div className="w-full h-80">
+          <h3 className="text-xl font-semibold mb-4 text-center">Core Competencies</h3>
+          <div className="w-full h-120 flex justify-center items-center">
             {mounted && <Radar data={radarData} options={radarOptions} />}
           </div>
         </motion.div>
