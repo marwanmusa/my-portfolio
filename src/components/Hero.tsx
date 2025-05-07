@@ -46,7 +46,7 @@ const Hero = () => {
               className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
             >
               Building intelligent solutions through code. Passionate about AI, data analysis,
-              and software engineering with expertise in Python, C++, and TypeScript.
+              and software engineering with expertise in Python, C++, and JavaScript/TypeScript.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -72,6 +72,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
+            whileHover={{ scale: 1.05 }}
             className="flex-1 flex justify-center"
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500">
@@ -79,14 +80,14 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-4xl">
                 MM
               </div>
-              {/* Uncomment and add your own image
-              <Image 
-                src="/profile.jpg" 
-                alt="Marwan Musa" 
-                fill 
+              {/* Import Image from next/image at the top of the file */}
+              <Image
+                src="/profilepict.jpeg"
+                alt="Marwan Musa"
+                fill
                 className="object-cover"
+                style={{ transform: "scale(1.2)", objectPosition: "center 10%" }}
               />
-              */}
             </div>
           </motion.div>
         </div>
@@ -95,4 +96,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;
