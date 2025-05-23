@@ -75,6 +75,22 @@ yarn dev
 └── tsconfig.json      # TypeScript configuration
 ```
 
+## 🧪 Running Tests
+
+This project uses [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for unit and component testing.
+
+To run the tests:
+
+```bash
+npm test
+```
+
+To run tests in watch mode:
+
+```bash
+npm run test:watch
+```
+
 ## Customization
 
 ### Personal Information

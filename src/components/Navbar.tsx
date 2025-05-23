@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { NAV_LINKS } from "../constants/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,10 +24,10 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {["About", "Skills", "Projects", "Experience", "Contact"].map((item, index) => (
+            {NAV_LINKS.map((link, index) => (
               <Link 
-                key={item} 
-                href={`#${item.toLowerCase()}`}
+                key={link.label} 
+                href={link.href}
                 className="relative hover:text-blue-500 transition-colors"
               >
                 <motion.span
@@ -35,7 +36,7 @@ const Navbar = () => {
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   className="relative"
                 >
-                  {item}
+                  {link.label}
                 </motion.span>
               </Link>
             ))}
@@ -46,6 +47,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-500 hover:text-gray-700 focus:outline-none"
+              data-testid="mobile-menu-button"
             >
               {isOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,16 +69,18 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden mt-4"
+            data-testid="mobile-menu"
           >
             <div className="flex flex-col space-y-4 py-2">
-              {["About", "Skills", "Projects", "Experience", "Contact"].map((item) => (
+              {NAV_LINKS.map((link) => (
                 <Link
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={link.label}
+                  href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+                  data-testid={`mobile-link-${link.label}`}
                 >
-                  {item}
+                  {link.label}
                 </Link>
               ))}
             </div>
